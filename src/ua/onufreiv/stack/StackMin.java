@@ -31,9 +31,13 @@ public class StackMin<T extends Comparable<T>> extends Stack<T> {
         return topElement;
     }
 
+    public T min() {
+        return stackMin.peek();
+    }
+
     @Override
     public String toString() {
         return super.toString() + ", min = " +
-                (isEmpty() ? "null" : stackMin.peek().toString());
+                (isEmpty() ? "null" : min().toString());
     }
 }
